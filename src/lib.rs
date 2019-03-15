@@ -10,7 +10,7 @@ mod test {
             "### second thing ", "st line 1", "     ", "st line 3",
         ];
 
-        let mt = parse(lines.iter()).unwrap();
+        let mt = parse_lines(lines.iter()).unwrap();
         assert_eq!(mt.len(), 3);
         assert_eq!(mt["multitext header"], "mh line 1\nmh line 2\nmh line 3\n");
         assert_eq!(mt["first thing"], "ft line 1\nft line 2\nft line 3\nft line 4\n");
