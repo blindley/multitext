@@ -41,7 +41,7 @@ impl std::fmt::Display for ParseError {
 
 impl std::error::Error for ParseError{}
 
-pub fn parse<I>(mut it: I) -> Result<HashMap<String, String>, ParseError>
+pub fn parse_lines<I>(mut it: I) -> Result<HashMap<String, String>, ParseError>
 where I: Iterator, <I as Iterator>::Item: AsRef<str>
 {
     let mut map = HashMap::new();
